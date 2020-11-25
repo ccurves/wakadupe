@@ -1,0 +1,27 @@
+<%- include('partials/header'); %>
+<div class="container-fluid sign-up-bg">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 signup-form-container">
+            <h1 class="form-title">Sign Up</h1>
+            <form action="/register" method="post" enctype="multipart/form-data">
+                <input type="text" name="firstName" placeholder="First Name" class="form-control input-field">
+                <input type="text" name="lastName" placeholder="Last Name" class="form-control input-field">
+                <input type="email" name="email" placeholder="Email Address" class="form-control input-field">
+                <input type="text" name="username" placeholder="Username" class="form-control input-field">
+                <input type="password" name="password" placeholder="Password" class="form-control input-field">
+                <textarea class="form-control input-field mb-2" type="text" name="bio" placeholder="Bio"></textarea>
+
+                <label for="image">Upload profile pic</label>
+                <input class=" file-field" type="file" name="image" accept="image/*" required>
+                <button type="submit" class="btn  button mt-4 my-2">Sign Up</button><br>
+                <a class="form-link " href="/login">Already have an
+                    account? </a><a class="form-link" href="/attractions"> Back to homepage</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include('partials/footer'); %>

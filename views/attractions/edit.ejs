@@ -1,0 +1,32 @@
+<%- include('../partials/header'); %>
+
+<div class="bg-container container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 col-sm-12 form-container">
+            <h1 class="form-title">Edit <%= attraction.name %></h1>
+
+            <form action="/attractions/<%= attraction._id %>/?_method=PUT" method="post" enctype="multipart/form-data">
+                <input class="form-control input-field" type="text" name="attraction[name]"
+                    value="<%= attraction.name %>">
+                <textarea class="form-control input-field" rows="5"
+                    name="attraction[description]"><%= attraction.description %></textarea>
+                <input class="form-control input-field mb-3" type="text" name="attraction[location]" id="location"
+                    value="<%=attraction.location %>">
+                <label for="image">Upload image</label>
+                <input class=" file-field" type="file" name="image" accept="image/*">
+                <button class=" btn-lg button mt-4 my-4" type=" submit">Submit!</button><br>
+                <a class="form-link mt-3" href="/attractions"> Back to homepage</a>
+        </div>
+
+
+        </form>
+
+
+
+    </div>
+</div>
+
+</div>
+
+
+<%- include('../partials/footer'); %>

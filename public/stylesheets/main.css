@@ -1,0 +1,302 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Century Gothic';
+}
+.row{
+    margin: 0 !important;
+}
+
+/* Attraction Page */
+.banner{
+    border-radius: 0px;
+    background: none;
+    background-image: url(/img/attract.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+.banner-title{
+    font-size: 70px;
+    line-height: 85px;
+}
+.button{
+    background: #09383E;
+    border-radius: 0;
+    outline: none;
+    padding: 10p;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    padding: 0.475rem 0.85rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-decoration: none;
+    border: none;
+}
+.button-outline{
+    outline: none;
+}
+.button-outline:focus{
+    outline: none;
+}
+.button:hover, .button:focus{
+    outline: none;
+    color: #fff;
+}
+.button a{
+    color: #fff;
+    text-decoration: none;
+}
+.button a:hover{
+    
+    color: #fff;
+}
+.line{
+    width: 212px;
+    height: 8px;
+    background: #09383E;
+    display: block;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.search-box{
+    position: relative;
+    height: 40px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+    border-bottom: 2px solid #09383E;
+    padding: 10px;
+}
+
+
+.search-txt{
+    border: none;
+    background: none !important;
+    outline: none;
+    padding: 0;
+    color: #09383E;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 240px;
+    padding: 0 6px;
+}
+
+
+/* Add New Attraction Page */
+.bg-container{
+    overflow: hidden;
+    box-sizing: content-box;
+    background-image: url(/img/Add-Attraction.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    position: absolute ;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+}
+
+.form-title{
+    font-size: 40px;
+    font-weight: 800;
+}
+.form-container{
+    margin-left: 141px;
+    top: 86px;
+}
+.signup-form-container{
+    margin-left: 141px;
+}
+.form-link{
+    color: #09383E;
+    margin-top: 25px;
+}
+.form-link:hover{
+    color: #09383E;
+    text-decoration: underline;
+}
+.input-field{
+    margin-top: 30px;
+    width: 70%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 0;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #09383E;
+    outline: none;
+}
+.input-field:focus{
+    outline: none !important;
+}
+.file-field{
+    width: 70%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 0;
+    background: none;
+    border: none;
+    outline: none;
+    display: block;
+}
+.file-field:focus{
+    outline: none !important;
+}
+
+.login-bg{
+    overflow: hidden;
+    box-sizing: content-box;
+    background-image: url(/img/Login-Page.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute ;
+    margin: 0;
+    padding: 0;
+    height: 82.7vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.sign-up-bg{
+    overflow: hidden;
+    box-sizing: content-box;
+    background-image: url(/img/Sign-Up.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute ;
+    margin: 0;
+    padding: 0;
+    height: 82.7vh;
+}
+.about-bg{
+    overflow: hidden;
+    box-sizing: content-box;
+    background-image: url(/img/About.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute ;
+    margin: 0;
+    padding: 0;
+    height: 82.7vh;
+}
+.thumbnail .caption-full{
+    padding: 9px;
+}
+#delete-form{
+    display: inline;
+}
+.form-inline{
+    display: inline;
+}
+.btn-icon{
+    background: none;
+    border: none;
+    outline: none;
+}
+.fa, .fas, .fab{
+    color: #09383E;
+   
+}
+.dropdown-item:focus{
+    background: #09383e63;
+}
+
+/* Google Maps */
+#map{
+    height: 400px;
+    width: 100%;
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+
+
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 768px){
+    .form-title{
+        font-size: 27px;
+    }
+    .form-container{
+        margin-left: 100px;
+        top: 86px;
+    }
+    .form-link{
+        font-size: 13.5px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .banner-title{
+        margin-top: 40px;
+        font-size: 35px;
+        line-height: 40px;
+        
+    }
+    .line{
+        width: 100px;
+        height: 4px;
+        margin-bottom: 30px;
+    }
+    .form-title{
+        font-size: 25px;
+    }
+    .form-container{
+        margin-left: 14px;
+        top: 86px;
+    }
+    .signup-form-container{
+        margin-left: 14px;
+    }
+    .form-link{
+        font-size: 13.5px;
+    }
+    .title{
+        font-size: 1.6em;
+        margin-bottom: 0.75rem;
+    }
+    .search-box{
+        position: relative;
+        width: 270px;
+    }
+
+    .button-outline{
+        padding: 0;
+    }
+    .copy-right{
+        font-size: 12.5px;
+    }
+}

@@ -1,0 +1,31 @@
+<%- include('../partials/header'); %>
+
+<div class="bg-container container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 col-sm-12 form-container">
+            <h1 class="form-title">Hey WakaDupe, Got a New Spot?</h1>
+
+            <form action="/attractions" method="post" enctype="multipart/form-data">
+                <input class="form-control input-field" type="text" name="attraction[name]" placeholder="name">
+                <textarea class="form-control input-field" type="text" name="attraction[description]" rows="5"
+                    placeholder="description"></textarea>
+                <input class="form-control input-field mb-3" type="text" name="attraction[location]" id="location"
+                    placeholder="Lekki, Lagos">
+                <label for="image">Upload image</label>
+                <input class=" file-field" type="file" name="image" accept="image/*" required>
+                <button class="btn-lg button mt-4 my-4" type="submit">Submit!</button><br>
+                <a class="form-link mt-3" href="/attractions"> Back to homepage</a>
+
+            </form>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+</div>
+
+
+<%- include('../partials/footer'); %>

@@ -1,0 +1,22 @@
+<%- include('../partials/header'); %>
+
+<div class="comment-container container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 col-sm-12 form-container">
+            <h1 class="form-title">Edit Comment</h1>
+
+            <form id="delete-form" action="/attractions/<%= attraction_id %>/comments/<%= comment._id %>?_method=PUT"
+                method="post">
+                <input class="form-control input-field" type="text" name="comment[text]" value="<%= comment.text %>">
+                <button class="btn btn-lg btn-default" type="submit">Submit!</button>
+
+            </form>
+            <a href="/attractions">Go back</a>
+
+
+        </div>
+    </div>
+
+</div>
+
+<%- include('../partials/footer'); %>

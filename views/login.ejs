@@ -1,0 +1,20 @@
+<%- include('partials/header'); %>
+
+<div class="container-fluid login-bg">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 form-container">
+            <h1 class="form-title">Login </h1>
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="username" class="form-control input-field">
+                <input type="password" name="password" placeholder="password" class="form-control input-field">
+                <button class="btn btn-lg button mt-4 my-4" type="submit">Login</button><br>
+                <a class="form-link" href="/register">Don't have an
+                    account?</a><a class="form-link" href="/attractions"> Back to homepage</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('partials/footer'); %>

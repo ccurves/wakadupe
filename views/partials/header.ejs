@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/external/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/external/fontawesome-free-5.12.1-web/css/all.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <script src="/bootstrap.min.js"></script>
+    <script src="/jquery-3.2.1.min.js"></script>
+    <title>WakaDupe</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light  mb-3">
+            <a href="#" class="navbar-brand">
+                <img src="/logo-01.png" alt="LOGO" srcset="" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <% if(!currentUser) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Sign Up </a>
+                    </li>
+                    <% }else{ %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn button-outline dropdown-toggle" data-toggle="dropdown">
+                            <%=currentUser.username %>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/users/<%= currentUser.id %>">Profile</a>
+                            <a class="dropdown-item" href="/logout">Logout</a>
+
+                        </div>
+                    </div>
+
+                    <div class="search-wrapper">
+                        <form action="/attractions" method="GET" class="search-box form-inline">
+                            <input class="search-txt" type="search" name="search" placeholder="Type to search">
+                            <button type="submit" class="search-btn btn-icon"><i class="fas fa-search"></i></button>
+
+                        </form>
+                    </div>
+
+                    <% } %>
+
+
+
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="container">
+        <% if(error && error.length > 0) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+
+        <% if(success && success.length > 0) { %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>

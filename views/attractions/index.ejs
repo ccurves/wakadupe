@@ -1,0 +1,49 @@
+<%- include('../partials/header'); %>
+
+<div class="container my-4">
+    <header class="jumbotron banner">
+        <div class="container">
+            <h1 class="banner-title">Don't just hear, <br>
+                Go see
+            </h1>
+            <span class="line"></span>
+
+            <p>
+                <button class="btn-lg button"><a href="/attractions/new">Add New Attraction</a> </button>
+            </p>
+        </div>
+
+    </header>
+
+    <div class="row ">
+        <div class="col-lg-12">
+            <h3 class="title">Our Poplular Attractions</h3>
+        </div>
+        <div class="col-md-12 mt-4 text-center">
+            <% if(noMatch !== undefined){ %>
+            <h4><%= noMatch %></h4>
+            <% } %>
+        </div>
+        <% attractions.forEach(function(attraction){ %>
+        <div class="col-md-4 col-sm-6">
+
+            <div class="card mb-4 " ">
+                <img src=" <%= attraction.image%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><%= attraction.name %></h5>
+                    <p class="card-text"><%= attraction.description.substring(0, 100) %>...</p>
+                    <a href="/attractions/<%= attraction._id%>" class="btn button">More Info</a>
+                </div>
+            </div>
+
+
+        </div>
+        <% }); %>
+    </div>
+
+
+
+</div>
+
+
+<%- include('../partials/footer'); %>
