@@ -2,3 +2,4 @@ node_modules
 /routes/config.js
 associations/
 public/stylesheets/external/fontawesome-free-5.12.1-web/
+.env
