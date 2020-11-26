@@ -21,7 +21,10 @@ dotenv.config();
 
 const app = express();
 
-mongoose.connect("mongodb://localhost/waka_dupe", {
+const PORT = process.env.PORT || 5000;
+
+// mongodb://localhost/waka_dupe
+mongoose.connect("mongodb+srv://simon:ccurves@wakadupe.6j6xx.mongodb.net/wakadupe?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -60,5 +63,4 @@ app.use("/", indexRoutes);
 app.use("/attractions", attractionRoutes);
 app.use("/attractions/:id/comments/", commentRoutes)
 
-
-app.listen(2000, () => { console.log("Server started at http://localhost:2000") }); 
+app.listen(PORT, () => console.log(`Server has started on port ${PORT}`));
