@@ -101,7 +101,6 @@ router.post("/", middlewareObj.isLoggedIn, upload.single('image'), (req, res) =>
                         req.flash('error', err.message);
                         return res.redirect('back');
                     }
-                    console.log(attraction)
 
                     res.redirect('/attractions/' + attraction.id);
                 });
