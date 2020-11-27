@@ -64,9 +64,12 @@
 
 
 <script>
+
+    const GEOCODER_API_KEY = config.GEOCODER_API_KEY;
+
     function initMap() {
         var lat = <%= attraction.lat %>;
-        var lng = <%= attaction.lng %>;
+        var lng = <%= attraction.lng %>;
         var center = { lat: lat, lng: lng };
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 8,
@@ -75,8 +78,8 @@
         });
         var contentString = `
         <strong><%= attraction.name %><br />
-        <%= attraction.location %></strong>
-        <p><%= attraction.description %></p>
+      <%= attraction.location %></strong>
+      <p><%= attraction.description %></p>
       `
         var infowindow = new google.maps.InfoWindow({
             content: contentString

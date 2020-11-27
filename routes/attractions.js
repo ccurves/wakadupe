@@ -14,6 +14,7 @@ const options = {
     formatter: null
 };
 
+
 const geocoder = NodeGeocoder(options);
 
 
@@ -77,32 +78,36 @@ router.post("/", middlewareObj.isLoggedIn, upload.single('image'), (req, res) =>
             console.log(err)
             req.flash('error', 'Invalid address');
             return res.redirect('back');
-        }
-        const lat = data[0].latitude;
-        const lng = data[0].longitude;
-        const location = data[0].formattedAddress;
-        cloudinary.uploader.upload(req.file.path, function (result) {
-            // add cloudinary url for the image to the attraction object under image property
-            req.body.attraction.image = result.secure_url;
-            //add image's public_id to attraction object
-            req.body.attraction.imageId = result.public_id;
-            // add author to attraction
-            req.body.attraction.author = {
-                id: req.user._id,
-                username: req.user.username
-            }
-
-            req.body.attraction.location = location;
-            req.body.attraction.lat = lat;
-            req.body.attraction.lng = lng;
-            Attraction.create(req.body.attraction, function (err, attraction) {
-                if (err) {
-                    req.flash('error', err.message);
-                    return res.redirect('back');
+        } else {
+            const lat = data[0].latitude;
+            const lng = data[0].longitude;
+            const location = data[0].formattedAddress;
+            cloudinary.uploader.upload(req.file.path, function (result) {
+                // add cloudinary url for the image to the attraction object under image property
+                req.body.attraction.image = result.secure_url;
+                //add image's public_id to attraction object
+                req.body.attraction.imageId = result.public_id;
+                // add author to attraction
+                req.body.attraction.author = {
+                    id: req.user._id,
+                    username: req.user.username
                 }
-                res.redirect('/attractions/' + attraction.id);
+
+                req.body.attraction.location = location;
+                req.body.attraction.lat = lat;
+                req.body.attraction.lng = lng;
+                Attraction.create(req.body.attraction, function (err, attraction) {
+                    if (err) {
+                        req.flash('error', err.message);
+                        return res.redirect('back');
+                    }
+                    console.log(attraction)
+
+                    res.redirect('/attractions/' + attraction.id);
+                });
             });
-        });
+        }
+
     });
 
 

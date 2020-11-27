@@ -21,10 +21,13 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 2000;
 
-// mongodb://localhost/waka_dupe
-mongoose.connect("mongodb+srv://simon:ccurves@wakadupe.6j6xx.mongodb.net/wakadupe?retryWrites=true&w=majority", {
+
+
+const DATABASEURL = config.DATABASEURL;
+
+mongoose.connect(DATABASEURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
