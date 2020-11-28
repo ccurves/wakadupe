@@ -128,7 +128,7 @@ body{
     text-decoration: underline;
 }
 .input-field{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 70%;
     height: 35px;
     padding: 10px;
@@ -170,6 +170,9 @@ body{
     height: 82.7vh;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+.rounded-circle{
+    border-radius: 50% !important;
 }
 .sign-up-bg{
     overflow: hidden;

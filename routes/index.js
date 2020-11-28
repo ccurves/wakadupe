@@ -58,7 +58,6 @@ router.post("/register", upload.single('image'), (req, res) => {
             username: req.body.username,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            email: req.body.email,
             avatar: req.body.image,
             bio: req.body.bio
         });
