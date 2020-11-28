@@ -25,9 +25,8 @@ const PORT = process.env.PORT || 2000;
 
 
 
-const DATABASEURL = config.DATABASEURL;
 
-mongoose.connect(DATABASEURL, {
+mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
