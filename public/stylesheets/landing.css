@@ -31,6 +31,10 @@ body{
 .container-item{
     margin: 0 auto 0;
 }
+a{
+    color: #fff;
+    text-decoration: none;
+}
 .landing-page-container{
     width: 100%;
     min-height: 100%;
@@ -99,9 +103,20 @@ body{
     position: relative;
     top: 24rem;
     left: 43%;
-    color: #09383e;
     font-size: 1.9rem;
     text-decoration: underline;
+    background: #09383E;
+    border-radius: 0;
+    outline: none;
+    padding: 10p;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    padding: 0.475rem 0.85rem;
+    line-height: 1.5;
+    text-decoration: none;
+    border: none;
 
 }
 .ellipse-container .greeting:after{
@@ -248,7 +263,7 @@ Extra (xl) large devices (large desktops, 1200px and up)
         position: relative;
         top: 24rem;
         left: 43%;
-        color: #09383e;
+        color: #fff;
         font-size: 1.9rem;
         text-decoration: underline;
     }
@@ -266,6 +281,7 @@ Extra (xl) large devices (large desktops, 1200px and up)
     .link{
         top: 38rem;
         left: 39%;
+        color: #fff;
     }
 }
 @media screen and (max-width: 576px) {
@@ -282,6 +298,7 @@ Extra (xl) large devices (large desktops, 1200px and up)
         top: 23rem;
         left: 37%;
         font-size: .9rem;
+        color: #fff;
            
     }
     .coorde{

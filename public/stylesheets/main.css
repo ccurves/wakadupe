@@ -219,6 +219,14 @@ body{
 .dropdown-item:focus{
     background: #09383e63;
 }
+.img{
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid #09383E;
+}
 
 /* Google Maps */
 #map{
