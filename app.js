@@ -24,7 +24,7 @@ const app = express();
 const PORT = process.env.PORT || 2000;
 
 
-mongoose.connect(DATABASEURL, {
+mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
