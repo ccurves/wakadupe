@@ -44,7 +44,7 @@ router.post("/", middlewareObj.isLoggedIn, (req, res) => {
                     attraction.comments.push(comment);
                     attraction.save();
                     //redirect to the show page
-                    res.redirect('/attractions/' + attraction._id);
+                    res.redirect("/attractions/" + req.params.id);
                 }
             })
         }

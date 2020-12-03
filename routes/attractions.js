@@ -170,6 +170,8 @@ router.put("/:id", middlewareObj.checkCampgroundOwnership, upload.single('image'
                         req.flash('error', 'Invalid address');
                         return res.redirect('back');
                     }
+                    attraction.imageId = result.public_id;
+                    attraction.image = result.secure_url;
                     req.body.attraction.lat = data[0].latitude;
                     req.body.attraction.lng = data[0].longitude;
                     req.body.attraction.location = data[0].formattedAddress;

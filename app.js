@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose';
 import flash from 'connect-flash';
 import passport from 'passport';
+import moment from 'moment';
 import dotenv from 'dotenv';
 import config from './routes/config';
 import localStrategy from 'passport-local';
@@ -24,7 +25,7 @@ const app = express();
 const PORT = process.env.PORT || 2000;
 
 
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect(config.DATABASEURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -39,6 +40,8 @@ app.use(methodOverride("_method"))
 
 // View Engine Setup 
 app.set("view engine", "ejs");
+
+app.locals.moment = moment;
 
 //Passport Configuration
 app.use(expressSession({
